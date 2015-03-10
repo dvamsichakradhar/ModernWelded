@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBEF4FF8-63D5-4F89-82D5-275C0F7907A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Welded</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IFLBaseDataLayer, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DisAssembly\IFLBaseDataLayer\bin\Debug\IFLBaseDataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IFLBusinessLayer">
+      <HintPath>..\..\..\..\..\Desktop\DisAssembly\IFLBusinessLayer\bin\Debug\IFLBusinessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IFLCommonLayer">
+      <HintPath>..\..\..\..\..\Desktop\DisAssembly\IFLBaseDataLayer\bin\Debug\IFLCommonLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IFLCustomUILayer">
+      <HintPath>..\..\..\..\..\Desktop\DisAssembly\IFLBusinessLayer\bin\Debug\IFLCustomUILayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Scripting">
+      <HintPath>..\..\References\Interop.Scripting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SldWorks">
+      <HintPath>..\..\References\Interop.SldWorks.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SldWorks_ExtractBitmap">
+      <HintPath>..\..\References\Interop.SldWorks_ExtractBitmap.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SolidWorks">
+      <HintPath>..\..\References\Interop.SolidWorks.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SwCommands">
+      <HintPath>..\..\References\Interop.SwCommands.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SwConst">
+      <HintPath>..\..\References\Interop.SwConst.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VBIDE">
+      <HintPath>..\..\..\Monarch 2014\Welded\September\FourthWeek\CYDA v3.0\bin\Debug\Interop.VBIDE.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LabelGradient">
+      <HintPath>..\..\References\LabelGradient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBaseLayer\clsCostingMILDB.cs" />
+    <Compile Include="DataBaseLayer\clsOperationDMC.cs" />
+    <Compile Include="DataBaseLayer\clsRodOperationsDMC.cs" />
+    <Compile Include="DataBaseLayer\clsWeldedCostingDataBaseClass.cs" />
+    <Compile Include="DataBaseLayer\clsWeldedDataClass.cs" />
+    <Compile Include="ExcelLayer\ExcelClass.cs" />
+    <Compile Include="ExcelUtil\ExcelUtil.cs" />
+    <Compile Include="ExcelUtil\ReadExcel.cs" />
+    <Compile Include="FunctionalLayer\clsListViewMIL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalLayer\clsListViewMIL.Designer.cs">
+      <DependentUpon>clsListViewMIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionalLayer\clsWeldedCylinderFunctionalClass.cs" />
+    <Compile Include="FunctionalLayer\clsWeldedGlobalVariables.cs" />
+    <Compile Include="FunctionalLayer\Contants.cs" />
+    <Compile Include="FunctionalLayer\IFLGetSetUIClass.cs" />
+    <Compile Include="FunctionalLayer\modWeldedCylinder.cs" />
+    <Compile Include="FunctionalLayer\PopulatingBackClass.cs" />
+    <Compile Include="SolidWorksLayer\IFLSolidWorksBaseClass.cs" />
+    <Compile Include="SolidWorksLayer\IFLSolidWorksClass.cs" />
+    <Compile Include="UILayer\Common\frmGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmGenerate.Designer.cs">
+      <DependentUpon>frmGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmHeadDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmHeadDesign.Designer.cs">
+      <DependentUpon>frmHeadDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmMonarchRevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmMonarchRevision.Designer.cs">
+      <DependentUpon>frmMonarchRevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPistonDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPistonDesign.Designer.cs">
+      <DependentUpon>frmPistonDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPrimaryInputs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPrimaryInputs.Designer.cs">
+      <DependentUpon>frmPrimaryInputs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRetractedLengthValidation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRetractedLengthValidation.Designer.cs">
+      <DependentUpon>frmRetractedLengthValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRevisionTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRevisionTable.Designer.cs">
+      <DependentUpon>frmRevisionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRodEndConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRodEndConfiguration.Designer.cs">
+      <DependentUpon>frmRodEndConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmTubeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmTubeDetails.Designer.cs">
+      <DependentUpon>frmTubeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmUpdateDatabaseRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmUpdateDatabaseRecords.Designer.cs">
+      <DependentUpon>frmUpdateDatabaseRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportBaseEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportBaseEnd.Designer.cs">
+      <DependentUpon>frmImportBaseEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPlateClevis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPlateClevis.Designer.cs">
+      <DependentUpon>frmImportPlateClevis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPorts.Designer.cs">
+      <DependentUpon>frmImportPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportRodEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportRodEnd.Designer.cs">
+      <DependentUpon>frmImportRodEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\mdiWeldedCylinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\mdiWeldedCylinder.Designer.cs">
+      <DependentUpon>mdiWeldedCylinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmContractDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmContractDetails.Designer.cs">
+      <DependentUpon>frmContractDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPin_Port_PaintAccessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPin_Port_PaintAccessories.Designer.cs">
+      <DependentUpon>frmPin_Port_PaintAccessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPortDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPortDetails.Designer.cs">
+      <DependentUpon>frmPortDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\New Design\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\New Design\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UILayer\Common\frmGenerate.resx">
+      <DependentUpon>frmGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmHeadDesign.resx">
+      <DependentUpon>frmHeadDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmMonarchRevision.resx">
+      <DependentUpon>frmMonarchRevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPistonDesign.resx">
+      <DependentUpon>frmPistonDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPrimaryInputs.resx">
+      <DependentUpon>frmPrimaryInputs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmRetractedLengthValidation.resx">
+      <DependentUpon>frmRetractedLengthValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmRevisionTable.resx">
+      <DependentUpon>frmRevisionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmRodEndConfiguration.resx">
+      <DependentUpon>frmRodEndConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmTubeDetails.resx">
+      <DependentUpon>frmTubeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmUpdateDatabaseRecords.resx">
+      <DependentUpon>frmUpdateDatabaseRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportBaseEnd.resx">
+      <DependentUpon>frmImportBaseEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportPlateClevis.resx">
+      <DependentUpon>frmImportPlateClevis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportPorts.resx">
+      <DependentUpon>frmImportPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportRodEnd.resx">
+      <DependentUpon>frmImportRodEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\mdiWeldedCylinder.resx">
+      <DependentUpon>mdiWeldedCylinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmContractDetails.resx">
+      <DependentUpon>frmContractDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPin_Port_PaintAccessories.resx">
+      <DependentUpon>frmPin_Port_PaintAccessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPortDetails.resx">
+      <DependentUpon>frmPortDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CMS_INTEGRATION\" />
+    <Folder Include="CNC Code\" />
+    <Folder Include="ReleasedCylinderClasses\" />
+    <Folder Include="UILayer\Conventional Design\" />
+    <Folder Include="WeldedCosting\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
